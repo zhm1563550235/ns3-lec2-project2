@@ -74,6 +74,6 @@ YansWifiChannelHelper channel = YansWifiChannelHelper::Default ();
   以上代码使用Ipv4AddressHelper分配IP地址给设备接口。首先使用网络10.1.1.0创建2个点对点设备需要的2个地址。然后使用网络10.1.2.0分配地址给STA设备1和无线网络的AP1。最后网络10.1.3.0分配地址给STA设备2和无线网络的AP2。
   
   运行整个程序，得到结果如图所示：
-  ！[编译结果](http://7xrn7f.com1.z0.glb.clouddn.com/16-6-20/47230805.jpg)
+  ![编译结果](http://7xrn7f.com1.z0.glb.clouddn.com/16-6-20/47230805.jpg)
   从编译结果可以看到，UDP回显客户端发送1024byte的数据分组给地址为10.1.3.1的服务器，此时客户端在地址为10.1.2.1的无线网络处。当UDP回显服务器收到回显数据分组后，同样会发送回相同的字节给回显客户端。并且在顶层目录，生成了4个跟踪文件。“third-0-0.pcap”对应节点0上的点到点设备，“third-1-0.pcap”对应节点1上的点到点设备，“third-0-1.pcap”和“third-1-1.pcap”是无线网络WiFi的混杂跟踪。
   
